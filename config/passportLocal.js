@@ -23,7 +23,7 @@ function initialize(passport, getUserByEmail, getUserById){
       });
       
     passport.deserializeUser(function(id, done) {
-          done(err, getUserById(id));
+          done(null, getUserById(id));
       });
 }
 
